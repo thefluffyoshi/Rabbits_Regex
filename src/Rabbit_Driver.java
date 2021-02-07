@@ -15,8 +15,8 @@ public class Rabbit_Driver
         System.out.println("Breed Name is: " + rabbit.getBreedName());
 
         System.out.println("Enter true or false for Baby Bunny: ");
-        rabbit.setIsBaby(input.hasNext());
-
+        rabbit.setIsBaby(input.nextBoolean());
+        System.out.println("Is it a Baby Bun? " + rabbit.getIsBaby());
 
         System.out.println("Enter age:");
         rabbit.setAge(input.nextLine());
