@@ -21,5 +21,9 @@ public class Rabbit_Driver
         System.out.println("Enter age:");
         rabbit.setAge(input.nextLine());
         System.out.println("Rabbit age: " + rabbit.getAge());
+
+        System.out.println("Enter weight");
+        rabbit.setWeight(input.nextLine());
+        System.out.println("Rabbit's weight: " + rabbit.getWeight());
     }
 }
