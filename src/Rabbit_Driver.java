@@ -9,6 +9,10 @@ public class Rabbit_Driver
         System.out.println("Enter a rabbit name:");
         rabbit.setRabbitName(input.nextLine());
         System.out.println("Rabbit's Name is: " + rabbit.getRabbitName());
+
+        System.out.println("Enter a breed name:");
+        rabbit.setBreedName(input.nextLine());
+        System.out.println("Breed Name is: " + rabbit.getBreedName());
         
     }
 }
