@@ -68,6 +68,11 @@ public class Rabbit_RegEx
         return weight;
     }
 
+    public boolean getIsBaby()
+    {
+        return isBaby;
+    }
+
     //Setters!
     public void setRabbitName(String rabbitName)
     {
@@ -123,7 +128,7 @@ public class Rabbit_RegEx
 
     private String validateBreedName(String breedName)
     {
-        while (!breedName.matches("^[A-Z][a-zA-Z- ]*"))
+        while (!breedName.matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"))
         {
             System.out.println("Breed names don't have numbers!");
             breedName = input.nextLine();
@@ -139,7 +144,11 @@ public class Rabbit_RegEx
             System.out.println("Age can't be in letters");
             age = input.nextLine();
         }
-        if (isBaby == true)
+        if (isBaby == false)
+        {
+            weekAge = age + " in years";
+        }
+        else if (isBaby == true)
         {
             weekAge = age + " in weeks";
         }
