@@ -63,6 +63,11 @@ public class Rabbit_RegEx
         return gender;
     }
 
+    public String getWeight()
+    {
+        return weight;
+    }
+
     //Setters!
     public void setRabbitName(String rabbitName)
     {
@@ -143,7 +148,7 @@ public class Rabbit_RegEx
 
     private String validateWeight(String weight)
     {
-       while (!weight.matches("/^[0-9]+(\\.[0-9]+)?$"))
+       while (!weight.matches("[0-9]{1,2}(\\.[0-9]{1,2})"))
        {
            System.out.println("Weight can't be in letters. Need a decimal!");
            weight = input.nextLine();
