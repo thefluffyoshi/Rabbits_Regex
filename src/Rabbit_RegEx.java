@@ -118,7 +118,7 @@ public class Rabbit_RegEx
 
     private String validateBreedName(String breedName)
     {
-        while (!breedName.matches("[A-Z][a-z]"))
+        while (!breedName.matches("^[A-Z][a-zA-Z- ]*"))
         {
             System.out.println("Breed names don't have numbers!");
             breedName = input.nextLine();
@@ -136,7 +136,7 @@ public class Rabbit_RegEx
         }
         if (isBaby == true)
         {
-            weekAge = "Age in weeks: " + age;
+            weekAge = age + " in weeks";
         }
         return weekAge;
     }//end validate age
