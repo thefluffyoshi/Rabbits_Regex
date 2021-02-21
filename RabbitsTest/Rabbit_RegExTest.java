@@ -11,4 +11,12 @@ class Rabbit_RegExTest
         rabbit_Name.setRabbitName("Butterscotch");
         assertTrue(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
     }//end rabbit name w/1st letter capital TEST ONE
+
+    @Test
+    void testlowerRabbitName()
+    {
+        Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
+        rabbit_Name.setRabbitName("snowflake");
+        assertTrue(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
+    }//end rabbit name w/all lowercase TEST TWO
 }
