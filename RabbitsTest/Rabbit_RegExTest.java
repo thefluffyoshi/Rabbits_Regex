@@ -27,4 +27,12 @@ class Rabbit_RegExTest
         rabbit_Name.setRabbitName("12345");
         assertFalse(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
     }//end numbers in name TEST THREE
-}
+
+    @Test
+    void testOneNumberinRabbitName()
+    {
+        Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
+        rabbit_Name.setRabbitName("MO0N");
+        assertFalse(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
+    }//end one number in rabbit name TEST FOUR
+}//end class test don't try to put tests underneath this!!
