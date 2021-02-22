@@ -5,39 +5,39 @@ import static org.junit.jupiter.api.Assertions.*;
 class Rabbit_RegExTest
 {
     //Testing Rabbit Names!
-    @Test
+    @Test //TEST ONE
     void testCapitalRabbitName()
     {
         Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
         rabbit_Name.setRabbitName("Butterscotch");
         assertTrue(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
-    }//end rabbit name w/1st letter capital TEST ONE
+    }//end rabbit name w/1st letter capital
 
-    @Test
+    @Test //TEST TWO
     void testlowerRabbitName()
     {
         Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
         rabbit_Name.setRabbitName("snowflake");
         assertTrue(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
-    }//end rabbit name w/all lowercase TEST TWO
+    }//end rabbit name w/all lowercase
 
-    @Test
+    @Test //TEST THREE
     void testallNumbersRabbitName()
     {
         Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
         rabbit_Name.setRabbitName("12345");
         assertFalse(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
-    }//end numbers in name TEST THREE
+    }//end numbers in name
 
-    @Test
+    @Test //TEST FOUR
     void testOneNumberinRabbitName()
     {
         Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
         rabbit_Name.setRabbitName("MO0N");
         assertFalse(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
-    }//end one number in rabbit name TEST FOUR
+    }//end one number in rabbit name
 
-    @Test
+    @Test //TEST FIVE
     void testSpecialCharactersRabbitName()
     {
         Rabbit_RegEx rabbit_Name = new Rabbit_RegEx();
@@ -47,7 +47,7 @@ class Rabbit_RegExTest
 
 
     //Testing Breed Names!
-    @Test
+    @Test //TEST ONE
     void testCapital1stLetterBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
@@ -55,7 +55,7 @@ class Rabbit_RegExTest
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end 1st letter is capital and some random capitals
 
-    @Test
+    @Test //TEST TWO
     void testallLowerBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
@@ -63,19 +63,27 @@ class Rabbit_RegExTest
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end only lowercase
 
-    @Test
+    @Test //TEST THREE
     void testallNumbersBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("282003");
-        assertFalse(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
+        assertFalse(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end only numbers in breed name
 
-    @Test
+    @Test //TEST FOUR
     void testSpacesAndCapitalsBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("Netherland Dwarf");
-        assertTrue(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
+        assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end spaces & capitals
+
+    @Test
+    void testSpacesAndLowercaseBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("silver fox");
+        assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
+    }
 }//end class test don't try to put tests underneath this!!
