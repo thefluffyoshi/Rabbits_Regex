@@ -70,4 +70,12 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("282003");
         assertFalse(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
     }//end only numbers in breed name
+
+    @Test
+    void testSpacesAndCapitalsBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("Netherland Dwarf");
+        assertTrue(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
+    }//end spaces & capitals
 }//end class test don't try to put tests underneath this!!
