@@ -128,7 +128,7 @@ public class Rabbit_RegEx
 
     private String validateBreedName(String breedName)
     {
-        while (!breedName.matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"))
+        while (!breedName.matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"))
         {
             System.out.println("Breed names don't have numbers!");
             return breedName;
