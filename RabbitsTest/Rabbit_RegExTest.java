@@ -44,4 +44,14 @@ class Rabbit_RegExTest
         rabbit_Name.setRabbitName("Pot!at!*"); //potat or potato w/out an o
         assertFalse(rabbit_Name.getRabbitName().matches("[A-Za-z-]*"));
     }//end special character within name
+
+
+    //Testing Breed Names!
+    @Test
+    void testCapital1stLetter()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("AmericanFuzzyLop");
+        assertTrue(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
+    }//end 1st letter is capital and some random capitals
 }//end class test don't try to put tests underneath this!!
