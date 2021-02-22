@@ -5,11 +5,11 @@ public class Rabbit_RegEx
     Scanner input = new Scanner(System.in);
     private String rabbitName;
     private String breedName;
-    private String color;
-    private int age; //in weeks
+    private String color; //not used
+    private int age; //in weeks or years
+    private double weight; //in pounds
     private String gender;
-    private String weight; //in pounds
-    private boolean trueDwarfGene;
+    private boolean trueDwarfGene; //not used
     private boolean isBaby;
 
     //Constructors!
@@ -20,12 +20,12 @@ public class Rabbit_RegEx
         color = "";
         age = 0;
         gender = "";
-        weight = "0.0";
+        weight = 0.0;
         trueDwarfGene = false;
         isBaby = false;
     }
 
-    public Rabbit_RegEx(String rabbitName, String breedName, String color, int age, String gender, String weight, boolean trueDwarfGene, boolean isBaby)
+    public Rabbit_RegEx(String rabbitName, String breedName, String color, int age, String gender, double weight, boolean trueDwarfGene, boolean isBaby)
     {
         this.rabbitName = rabbitName;
         this.breedName = breedName;
@@ -63,7 +63,7 @@ public class Rabbit_RegEx
         return gender;
     }
 
-    public String getWeight()
+    public double getWeight()
     {
         return weight;
     }
@@ -99,9 +99,9 @@ public class Rabbit_RegEx
         this.gender = gender;
     }
 
-    public void setWeight(String weight)
+    public void setWeight(double weight)
     {
-        this.weight = validateWeight(weight);
+        this.weight = checkForValidWeight(weight);
     }
 
     public void setTrueDwarfGene(boolean trueDwarfGene)
@@ -150,6 +150,31 @@ public class Rabbit_RegEx
         return age;
     }//end valid age
 
+    private double checkForValidWeight(double weight)
+    {
+        if (weight < 0.0)
+        {
+            weight = 1;
+        }
+        else if (weight > 15.0)
+        {
+            weight = 15.0; //largest rabbit, French Lop
+        }
+        return weight;
+    }
+
+    public String toString()
+    {
+        if(isBaby == false)
+        {
+            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " years" + "\nWeight: " + weight + " in pounds";
+        }
+        else
+        {
+            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " weeks" + "\nWeight: " + weight + " in ounces";
+        }
+    }
+
 //    private String validateAge(String age, boolean isBaby)
 //    {
 //        String weekAge = "";
@@ -174,25 +199,14 @@ public class Rabbit_RegEx
 //        return weekAge;
 //    }//end validate age
 
-    private String validateWeight(String weight)
-    {
-       while (!weight.matches("[0-9]{1,2}(\\.[0-9]{1,2})"))
-       {
-           System.out.println("Weight can't be in letters. Need a decimal!");
-           return weight;
-       }
-       return weight;
-    }//end validate weight
+//    private String validateWeight(String weight)
+//    {
+//       while (!weight.matches("[0-9]{1,2}(\\.[0-9]{1,2})"))
+//       {
+//           System.out.println("Weight can't be in letters. Need a decimal!");
+//           return weight;
+//       }
+//       return weight;
+//    }//end validate weight
 
-    public String toString()
-    {
-        if(isBaby == false)
-        {
-            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " years";
-        }
-        else
-        {
-            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " weeks";
-        }
-    }
 }//end class Rabbit RegEx
