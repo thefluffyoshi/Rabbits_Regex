@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Rabbit_RegExTest
 {
-    //Testing Rabbit Names!
+    //Testing Rabbit Names!!
     @Test //TEST ONE
     void testCapitalRabbitName()
     {
@@ -79,11 +79,19 @@ class Rabbit_RegExTest
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end spaces & capitals
 
-    @Test
+    @Test //TEST FIVE
     void testSpacesAndLowercaseBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("silver fox");
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
-    }
+    }//end spaces & lowercase
+
+    @Test //TEST SIX
+    void testSpecialCharactersBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("Champagne d'Argent");
+        assertFalse(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z- ][a-zA-z- ]*"));
+    }//end testing for special characters
 }//end class test don't try to put tests underneath this!!
