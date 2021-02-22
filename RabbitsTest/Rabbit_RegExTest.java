@@ -198,4 +198,17 @@ class Rabbit_RegExTest
                 "Weight: 15.0 in pounds";
         assertEquals(expected, rabbit_weight.toString());
     }//end positive high weight
+
+    @Test //TEST FIVE
+    void testPositiveOverLimitWeight()
+    {
+        Rabbit_RegEx rabbit_weight = new Rabbit_RegEx();
+        rabbit_weight.setWeight(17);
+        rabbit_weight.setIsBaby(false);
+        rabbit_weight.setAge(5);
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 5 years\n" +
+                "Weight: 15.0 in pounds";
+        assertEquals(expected, rabbit_weight.toString());
+    }//end weight over limit
 }//end class test don't try to put tests underneath this!!
