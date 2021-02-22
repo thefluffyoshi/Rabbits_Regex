@@ -104,7 +104,8 @@ class Rabbit_RegExTest
         rabbit_age.setAge(-5);
         rabbit_age.setIsBaby(true);
         String expected = "Is the rabbit a baby?: true\n" +
-                "How old is the rabbit?: 0 weeks";
+                "How old is the rabbit?: 0 weeks"  +
+                "\nWeight: 0.0 in ounces";
         assertEquals(expected, rabbit_age.toString());
     }//end negative age + baby set to true
 
@@ -115,7 +116,8 @@ class Rabbit_RegExTest
         rabbit_age.setAge(4);
         rabbit_age.setIsBaby(true);
         String expected = "Is the rabbit a baby?: true\n" +
-                "How old is the rabbit?: 4 weeks";
+                "How old is the rabbit?: 4 weeks" +
+                "\nWeight: 0.0 in ounces";
         assertEquals(expected, rabbit_age.toString());
     }//end positive low age + baby set to true
 
@@ -126,18 +128,35 @@ class Rabbit_RegExTest
         rabbit_age.setAge(10);
         rabbit_age.setIsBaby(false);
         String expected = "Is the rabbit a baby?: false\n" +
-                "How old is the rabbit?: 10 years";
+                "How old is the rabbit?: 10 years" +
+                "\nWeight: 0.0 in pounds";
         assertEquals(expected, rabbit_age.toString());
     }//end positive high age + baby set to false
 
-    @Test
+    @Test //TEST FOUR
     void testOverAgeLimit()
     {
         Rabbit_RegEx rabbit_age = new Rabbit_RegEx();
         rabbit_age.setAge(18);
         rabbit_age.setIsBaby(false);
         String expected = "Is the rabbit a baby?: false\n" +
-                "How old is the rabbit?: 10 years";
+                "How old is the rabbit?: 10 years" +
+                "\nWeight: 0.0 in pounds";
         assertEquals(expected, rabbit_age.toString());
-    }
+    }//end age over 10
+
+
+    //Testing Weight!!
+    @Test
+    void testNegativeWeight()
+    {
+        Rabbit_RegEx rabbit_weight = new Rabbit_RegEx();
+        rabbit_weight.setWeight(-5.0);
+        rabbit_weight.setIsBaby(true);
+        rabbit_weight.setAge(2);
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 2 weeks\n" +
+                "Weight: 1.0 in ounces";
+        assertEquals(expected, rabbit_weight.toString());
+    }//end negative weight
 }//end class test don't try to put tests underneath this!!
