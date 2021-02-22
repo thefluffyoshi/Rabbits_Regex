@@ -185,4 +185,17 @@ class Rabbit_RegExTest
                 "Weight: 2.5 in pounds";
         assertEquals(expected, rabbit_weight.toString());
     } //end adult bun, low weight (dwarfs/smaller breeds)
+
+    @Test //TEST FOUR
+    void testPositiveHighWeight()
+    {
+        Rabbit_RegEx rabbit_weight = new Rabbit_RegEx();
+        rabbit_weight.setWeight(15);
+        rabbit_weight.setIsBaby(false);
+        rabbit_weight.setAge(4);
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 4 years\n" +
+                "Weight: 15.0 in pounds";
+        assertEquals(expected, rabbit_weight.toString());
+    }//end positive high weight
 }//end class test don't try to put tests underneath this!!
