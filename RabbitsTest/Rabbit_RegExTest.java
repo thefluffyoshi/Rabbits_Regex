@@ -62,4 +62,12 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("dwarfhotot"); //Dwarf Hotot
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"));
     }//end only lowercase
+
+    @Test
+    void testallNumbersBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("282003");
+        assertFalse(rabbit_breed.getBreedName().matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"));
+    }//end only numbers in breed name
 }//end class test don't try to put tests underneath this!!
