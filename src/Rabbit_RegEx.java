@@ -188,8 +188,11 @@ public class Rabbit_RegEx
     {
         if(isBaby == false)
         {
-            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " in years";
+            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " years";
         }
-        return "Rabbit Name: " + rabbitName + "\nBreed Name: " + breedName + "\n";
+        else
+        {
+            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " weeks";
+        }
     }
 }//end class Rabbit RegEx
