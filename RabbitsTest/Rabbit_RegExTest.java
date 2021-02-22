@@ -118,4 +118,15 @@ class Rabbit_RegExTest
                 "How old is the rabbit?: 4 weeks";
         assertEquals(expected, rabbit_age.toString());
     }//end positive low age + baby set to true
+
+    @Test //TEST THREE
+    void testPositiveHighAge()
+    {
+        Rabbit_RegEx rabbit_age = new Rabbit_RegEx();
+        rabbit_age.setAge(10);
+        rabbit_age.setIsBaby(false);
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 10 years";
+        assertEquals(expected, rabbit_age.toString());
+    }//end positive high age + baby set to false
 }//end class test don't try to put tests underneath this!!
