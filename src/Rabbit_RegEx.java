@@ -6,7 +6,7 @@ public class Rabbit_RegEx
     private String rabbitName;
     private String breedName;
     private String color;
-    private String age; //in weeks
+    private int age; //in weeks
     private String gender;
     private String weight; //in pounds
     private boolean trueDwarfGene;
@@ -18,14 +18,14 @@ public class Rabbit_RegEx
         rabbitName = "";
         breedName = "";
         color = "";
-        age = "0";
+        age = 0;
         gender = "";
         weight = "0.0";
         trueDwarfGene = false;
         isBaby = false;
     }
 
-    public Rabbit_RegEx(String rabbitName, String breedName, String color, String age, String gender, String weight, boolean trueDwarfGene, boolean isBaby)
+    public Rabbit_RegEx(String rabbitName, String breedName, String color, int age, String gender, String weight, boolean trueDwarfGene, boolean isBaby)
     {
         this.rabbitName = rabbitName;
         this.breedName = breedName;
@@ -53,7 +53,7 @@ public class Rabbit_RegEx
         return color;
     }
 
-    public String getAge()
+    public int getAge()
     {
         return age;
     }
@@ -89,9 +89,9 @@ public class Rabbit_RegEx
         this.color = color;
     }
 
-    public void setAge(String age)
+    public void setAge(int age)
     {
-        this.age = validateAge(age, isBaby);
+        this.age = checkForValidAge(age);
     }
 
     public void setGender(String gender)
@@ -121,7 +121,7 @@ public class Rabbit_RegEx
         while(!rabbitName.matches("[A-Za-z-]*"))
         {
             System.out.println("You can't use special characters. A-Z or a-z");
-            rabbitName = input.nextLine();
+            return rabbitName;
         }
         return rabbitName;
     }//end validateRabbitName
@@ -131,37 +131,65 @@ public class Rabbit_RegEx
         while (!breedName.matches("^[A-Z][a-zA-Z-][a-zA-z- ]*"))
         {
             System.out.println("Breed names don't have numbers!");
-            breedName = input.nextLine();
+            return breedName;
         }
         return breedName;
+        //probably add dwarfGene method??
     }//end validateBreedName
 
-    private String validateAge(String age, boolean isBaby)
+    private int checkForValidAge(int age)
     {
-        String weekAge = "";
-        while(!age.matches("[0-9]"))
+        if (age < 0)
         {
-            System.out.println("Age can't be in letters");
-            age = input.nextLine();
+            age = 0;
         }
-        if (isBaby == false)
+        else if (age > 10)
         {
-            weekAge = age + " in years";
+            age = 10;
         }
-        else if (isBaby == true)
-        {
-            weekAge = age + " in weeks";
-        }
-        return weekAge;
-    }//end validate age
+        return age;
+    }//end valid age
+
+//    private String validateAge(String age, boolean isBaby)
+//    {
+//        String weekAge = "";
+//        while(!age.matches("[0-9]"))
+//        {
+//            System.out.println("Age can't be in letters");
+//            age = input.nextLine();
+//        }
+//        if (isBaby == false)
+//        {
+//            weekAge = age + " in years";
+//        }
+//        else if (isBaby == true)
+//        {
+//            weekAge = age + " in weeks";
+//        }
+//
+//        if (age.equals("0") || )
+//        {
+//
+//        }
+//        return weekAge;
+//    }//end validate age
 
     private String validateWeight(String weight)
     {
        while (!weight.matches("[0-9]{1,2}(\\.[0-9]{1,2})"))
        {
            System.out.println("Weight can't be in letters. Need a decimal!");
-           weight = input.nextLine();
+           return weight;
        }
        return weight;
+    }//end validate weight
+
+    public String toString()
+    {
+        if(isBaby == false)
+        {
+            return "Is the rabbit a baby?: " + isBaby + "\nHow old is the rabbit?: " + age + " in years";
+        }
+        return "Rabbit Name: " + rabbitName + "\nBreed Name: " + breedName + "\n";
     }
 }//end class Rabbit RegEx
