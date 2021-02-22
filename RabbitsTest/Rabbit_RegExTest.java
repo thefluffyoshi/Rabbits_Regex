@@ -147,16 +147,29 @@ class Rabbit_RegExTest
 
 
     //Testing Weight!!
-    @Test
+    @Test //TEST ONE
     void testNegativeWeight()
     {
         Rabbit_RegEx rabbit_weight = new Rabbit_RegEx();
         rabbit_weight.setWeight(-5.0);
         rabbit_weight.setIsBaby(true);
-        rabbit_weight.setAge(2);
+        rabbit_weight.setAge(1);
         String expected = "Is the rabbit a baby?: true\n" +
-                "How old is the rabbit?: 2 weeks\n" +
+                "How old is the rabbit?: 1 weeks\n" +
                 "Weight: 1.0 in ounces";
         assertEquals(expected, rabbit_weight.toString());
     }//end negative weight
+
+    @Test //TEST TWO
+    void testPositiveLowWeightAndBabyBun()
+    {
+        Rabbit_RegEx rabbit_weight = new Rabbit_RegEx();
+        rabbit_weight.setWeight(3.5);
+        rabbit_weight.setIsBaby(true);
+        rabbit_weight.setAge(2);
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 2 weeks\n" +
+                "Weight: 3.5 in ounces";
+        assertEquals(expected, rabbit_weight.toString());
+    }//end positive low weight and baby bun
 }//end class test don't try to put tests underneath this!!
