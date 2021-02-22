@@ -211,4 +211,21 @@ class Rabbit_RegExTest
                 "Weight: 15.0 in pounds";
         assertEquals(expected, rabbit_weight.toString());
     }//end weight over limit
+
+
+    //Rabbit colors!
+    @Test
+    void testAgoutiColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Agouti");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Agouti";
+        assertEquals(expected, rabbit_color.toString());
+    }//end check Agouti color
 }//end class test don't try to put tests underneath this!!
