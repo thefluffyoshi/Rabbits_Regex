@@ -320,6 +320,21 @@ class Rabbit_RegExTest
         rabbit_color.setIsBaby(true);
         rabbit_color.setWeight(2);
         rabbit_color.setAge(4);
+        rabbit_color.setColor("Blue");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Blue";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color blue
+
+    @Test //TEST EIGHT
+    void testLowercaseBlueColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
         rabbit_color.setColor("blue");
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
