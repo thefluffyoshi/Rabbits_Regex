@@ -68,6 +68,11 @@ public class Rabbit_RegEx
         return weight;
     }
 
+    public boolean getTrueDwarfGene()
+    {
+        return trueDwarfGene;
+    }
+
     public boolean getIsBaby()
     {
         return isBaby;
@@ -106,7 +111,7 @@ public class Rabbit_RegEx
 
     public void setTrueDwarfGene(boolean trueDwarfGene)
     {
-        this.trueDwarfGene = trueDwarfGene;
+        this.trueDwarfGene = checkTrueDwarfGene(trueDwarfGene, breedName);
     }
 
     public void setIsBaby(boolean isBaby)
@@ -128,13 +133,18 @@ public class Rabbit_RegEx
 
     private String validateBreedName(String breedName)
     {
+        String[] breedNameArr = {"American", "American Chinchilla", "American Fuzzy Lop", "American Sable", "Argente Brun",
+            "Belgian Hare", "Beveren", "Blanc de Hotot", "Britannia Petite", "Californian", "Cavies", "Champagne d'Argent", "Checkered Giant", "Cinnamon",
+            "Creme d'Argent", "Dutch", "Dwarf Hotot", "English Angora", "English Lop", "English Spot", "Flemish Giant", "Florida White", "French Angora", "French Lop",
+            "Giant Angora", "Giant Chinchilla", "Harlequin", "Havana", "Himalayan", "Holland Lop", "Jersey Wooly", "Lilac", "Lionhead",
+            "Mini Lop", "Mini Rex", "Mini Satin", "Netherland Dwarf", "New Zealand", "Palomino", "Polish", "Rex", "Rhinelander",
+            "Satin", "Santin Angora", "Silver", "Silver Fox", "Silver Marten", "Standard Chinchilla", "Tan", "Thrianta"};
         while (!breedName.matches("^[A-Za-z][a-zA-Z-][a-zA-z- ]*"))
         {
             System.out.println("Breed names don't have numbers!");
             return breedName;
         }//end while
         return breedName;
-        //probably add dwarfGene method??
     }//end validateBreedName
 
     private int checkForValidAge(int age)
@@ -188,21 +198,47 @@ public class Rabbit_RegEx
         return color;
     }//end validate colors
 
+    private boolean checkTrueDwarfGene(boolean trueDwarfGene, String breedName)
+    {
+        //uppercase and lowercase
+        String[] breedNameArr = {"Holland Lop", "Netherland Dwarf", "Mini Rex", "Mini Satin", "Dwarf Hotot", "Polish", "Britannia Petite", "American Fuzzy Lop", "Jersey Wooly"};
+
+        if (trueDwarfGene == true)
+        {
+            for (int i = 0; i < breedNameArr.length; i++)
+            {
+                if (breedName.equals(breedNameArr[i]))
+                {
+                    while(!breedName.matches("[A-Za-z- ][A-Za-z- ]*"))
+                    {
+                        System.out.println("You can't use special characters. A-Z or a-z");
+                        return trueDwarfGene;
+                    }//end while loop
+                }//end nested if
+                else
+                {
+                    trueDwarfGene = false;
+                }//end nested else
+            }//end for
+        }//end if
+        return trueDwarfGene;
+    }
+
     public String toString()
     {
         if(isBaby == false)
         {
             return "Is the rabbit a baby?: " + isBaby +
-                    "\nHow old is the rabbit?: " + age + " years" +
-                    "\nWeight: " + weight + " in pounds" +
-                    "\nColor: " + color;
+                        "\nHow old is the rabbit?: " + age + " years" +
+                        "\nWeight: " + weight + " in pounds" +
+                        "\nColor: " + color;
         }//end if
         else
         {
             return "Is the rabbit a baby?: " + isBaby +
-                    "\nHow old is the rabbit?: " + age + " weeks" +
-                    "\nWeight: " + weight + " in ounces" +
-                    "\nColor: " + color;
+                        "\nHow old is the rabbit?: " + age + " weeks" +
+                        "\nWeight: " + weight + " in ounces" +
+                        "\nColor: " + color;
         }//end else
     }//end toString
 
