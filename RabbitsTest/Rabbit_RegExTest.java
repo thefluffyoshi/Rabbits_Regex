@@ -236,7 +236,7 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: Agouti";
         assertEquals(expected, rabbit_color.toString());
-    }//end check Agouti color
+    }//end test uppercase color agouti
 
     @Test //TEST TWO
     void testLowercaseAgoutiColor()
@@ -251,7 +251,7 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: agouti";
         assertEquals(expected, rabbit_color.toString());
-    }//end lowercase agouti
+    }//end lowercase color agouti
 
     @Test //TEST THREE
     void testUppercaseBlackColor()
@@ -266,7 +266,7 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: Black";
         assertEquals(expected, rabbit_color.toString());
-    }//end uppercase black
+    }//end uppercase color black
 
     @Test //TEST FOUR
     void testLowercaseBlackColor()
@@ -284,7 +284,7 @@ class Rabbit_RegExTest
     }//end lowercase color black
 
     @Test //TEST FIVE
-    void testUppercaseBlackOtter()
+    void testUppercaseBlackOtterColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
         rabbit_color.setIsBaby(true);
@@ -296,5 +296,20 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: Black Otter";
         assertEquals(expected, rabbit_color.toString());
-    }
+    }//end test uppercase color black otter
+
+    @Test //TEST SIX
+    void testLowercaseBlackOtterColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("black otter");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: black otter";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color black otter
 }//end class test don't try to put tests underneath this!!
