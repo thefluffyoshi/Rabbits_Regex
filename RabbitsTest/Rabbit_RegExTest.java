@@ -416,7 +416,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
     }//end test when dwarf gene is true w/holland lop
 
-    @Test
+    @Test //TEST TWO
     void testNetherlandDwarfTrueDwarfGene()
     {
         Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
@@ -425,4 +425,14 @@ class Rabbit_RegExTest
         boolean expected = true;
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
     }//end test dwarf gene true w/netherland dwarf
+
+    @Test
+    void testAmericanTrueDwarfGene()
+    {
+        Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
+        rabbit_gene.setTrueDwarfGene(true);
+        rabbit_gene.setBreedName("American");
+        boolean expected = false;
+        assertEquals(expected, rabbit_gene.getTrueDwarfGene());
+    }
 }//end class test don't try to put tests underneath this!!
