@@ -342,4 +342,19 @@ class Rabbit_RegExTest
                 "Color: blue";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue
+
+    @Test //TEST NINE
+    void testUppercaseBlueOtterColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Blue Otter");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Blue Otter";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color blue otter
 }//end class test don't try to put tests underneath this!!
