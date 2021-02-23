@@ -214,7 +214,7 @@ class Rabbit_RegExTest
 
 
     //Rabbit colors!
-    @Test
+    @Test //TEST ONE
     void testUppercaseAgoutiColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -229,7 +229,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end check Agouti color
 
-    @Test
+    @Test //TEST TWO
     void testLowercaseAgoutiColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -244,7 +244,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase agouti
 
-    @Test
+    @Test //TEST THREE
     void testUppercaseBlackColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -257,5 +257,20 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: Black";
         assertEquals(expected, rabbit_color.toString());
-    }
+    }//end uppercase black
+
+    @Test //TEST FOUR
+    void testLowercaseBlackColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("black");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: black";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color black
 }//end class test don't try to put tests underneath this!!
