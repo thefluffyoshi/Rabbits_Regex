@@ -104,8 +104,9 @@ class Rabbit_RegExTest
         rabbit_age.setAge(-5);
         rabbit_age.setIsBaby(true);
         String expected = "Is the rabbit a baby?: true\n" +
-                "How old is the rabbit?: 0 weeks"  +
-                "\nWeight: 0.0 in ounces";
+                "How old is the rabbit?: 0 weeks\n" +
+                "Weight: 0.0 in ounces\n" +
+                "Color: ";
         assertEquals(expected, rabbit_age.toString());
     }//end negative age + baby set to true
 
@@ -116,8 +117,9 @@ class Rabbit_RegExTest
         rabbit_age.setAge(4);
         rabbit_age.setIsBaby(true);
         String expected = "Is the rabbit a baby?: true\n" +
-                "How old is the rabbit?: 4 weeks" +
-                "\nWeight: 0.0 in ounces";
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 0.0 in ounces\n" +
+                "Color: ";
         assertEquals(expected, rabbit_age.toString());
     }//end positive low age + baby set to true
 
@@ -128,8 +130,9 @@ class Rabbit_RegExTest
         rabbit_age.setAge(10);
         rabbit_age.setIsBaby(false);
         String expected = "Is the rabbit a baby?: false\n" +
-                "How old is the rabbit?: 10 years" +
-                "\nWeight: 0.0 in pounds";
+                "How old is the rabbit?: 10 years\n" +
+                "Weight: 0.0 in pounds\n" +
+                "Color: ";
         assertEquals(expected, rabbit_age.toString());
     }//end positive high age + baby set to false
 
@@ -140,8 +143,9 @@ class Rabbit_RegExTest
         rabbit_age.setAge(18);
         rabbit_age.setIsBaby(false);
         String expected = "Is the rabbit a baby?: false\n" +
-                "How old is the rabbit?: 10 years" +
-                "\nWeight: 0.0 in pounds";
+                "How old is the rabbit?: 10 years\n" +
+                "Weight: 0.0 in pounds\n" +
+                "Color: ";
         assertEquals(expected, rabbit_age.toString());
     }//end age over 10
 
@@ -156,7 +160,8 @@ class Rabbit_RegExTest
         rabbit_weight.setAge(1);
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 1 weeks\n" +
-                "Weight: 1.0 in ounces";
+                "Weight: 1.0 in ounces\n" +
+                "Color: ";
         assertEquals(expected, rabbit_weight.toString());
     }//end negative weight
 
@@ -169,7 +174,8 @@ class Rabbit_RegExTest
         rabbit_weight.setAge(2);
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 2 weeks\n" +
-                "Weight: 3.5 in ounces";
+                "Weight: 3.5 in ounces\n" +
+                "Color: ";
         assertEquals(expected, rabbit_weight.toString());
     }//end positive low weight and baby bun
 
@@ -182,7 +188,8 @@ class Rabbit_RegExTest
         rabbit_weight.setAge(3);
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 3 years\n" +
-                "Weight: 2.5 in pounds";
+                "Weight: 2.5 in pounds\n" +
+                "Color: ";
         assertEquals(expected, rabbit_weight.toString());
     } //end adult bun, low weight (dwarfs/smaller breeds)
 
@@ -195,7 +202,8 @@ class Rabbit_RegExTest
         rabbit_weight.setAge(4);
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 4 years\n" +
-                "Weight: 15.0 in pounds";
+                "Weight: 15.0 in pounds\n" +
+                "Color: ";
         assertEquals(expected, rabbit_weight.toString());
     }//end positive high weight
 
@@ -208,7 +216,8 @@ class Rabbit_RegExTest
         rabbit_weight.setAge(5);
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 5 years\n" +
-                "Weight: 15.0 in pounds";
+                "Weight: 15.0 in pounds\n" +
+                "Color: ";
         assertEquals(expected, rabbit_weight.toString());
     }//end weight over limit
 
@@ -273,4 +282,19 @@ class Rabbit_RegExTest
                 "Color: black";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color black
+
+    @Test //TEST FIVE
+    void testUppercaseBlackOtter()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Black Otter");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Black Otter";
+        assertEquals(expected, rabbit_color.toString());
+    }
 }//end class test don't try to put tests underneath this!!
