@@ -388,7 +388,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color blue steel
 
-    @Test //TEST TW
+    @Test //TEST TWELVE
     void testLowercaseBlueSteelColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -401,5 +401,18 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: blue steel";
         assertEquals(expected, rabbit_color.toString());
-    }//end uppercase color blue steel
+    }//end lowercase color blue steel
+
+
+    //Test True Dwarf Gene!
+    @Test //TEST ONE
+    void testTrueDwarfGene()
+    {
+        Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
+        rabbit_gene.setTrueDwarfGene(true);
+        rabbit_gene.setBreedName("Holland Lop");
+
+        boolean expected = true;
+        assertEquals(expected, rabbit_gene.getTrueDwarfGene());
+    }
 }//end class test don't try to put tests underneath this!!
