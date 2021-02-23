@@ -178,7 +178,7 @@ public class Rabbit_RegEx
         {
             if (color.equals(colorArr[i]))
             {
-                while(!color.matches("[A-Za-z-]*"))
+                while(!color.matches("[A-Za-z- ][A-Za-z- ]*"))
                 {
                     System.out.println("You can't use special characters. A-Z or a-z");
                     return color;
