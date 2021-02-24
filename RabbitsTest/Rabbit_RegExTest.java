@@ -131,6 +131,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name american chinchilla
 
+    @Test //TEST ELEVEN
+    void testUppercaseAmericanFuzzyLopBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("American Fuzzy Lop");
+        String expected = "American Fuzzy Lop";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name American Fuzzy Lop
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
