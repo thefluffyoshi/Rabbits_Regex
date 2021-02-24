@@ -1065,4 +1065,18 @@ class Rabbit_RegExTest
                 "Gender: female";
         assertEquals(expected, rabbit_gender.toString());
     }//end bun not baby gender is true
+
+    @Test
+    void testnotBabyGenderFalse()
+    {
+        Rabbit_RegEx rabbit_gender = new Rabbit_RegEx();
+        rabbit_gender.setIsBaby(false);
+        rabbit_gender.setGender(false);
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 0 years\n" +
+                "Weight: 0.0 in pounds\n" +
+                "Color: \n" +
+                "Gender: male";
+        assertEquals(expected, rabbit_gender.toString());
+    }
 }//end class test don't try to put tests underneath this!!
