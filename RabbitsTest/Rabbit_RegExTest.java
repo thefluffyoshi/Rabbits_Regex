@@ -547,7 +547,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color castor
 
-    @Test
+    @Test //TEST TWENTY-TWO
     void testLowercaseCastorColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -560,8 +560,22 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: castor";
         assertEquals(expected, rabbit_color.toString());
-    }
+    }//end lowercase color castor
 
+    @Test
+    void testUppercaseChinchillaColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Chinchilla");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Chinchilla";
+        assertEquals(expected, rabbit_color.toString());
+    }
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
@@ -645,12 +659,12 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
     }//end test dwarf gene w/American Fuzzy Lop
 
-    @Test
+    @Test //TEST TEN
     void testJerseyWoolyTrueDwarfGene()
     {
         Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
         rabbit_gene.setTrueDwarfGene(true, "Jersey Wooly");
         boolean expected = true;
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
-    }
+    }//end test dwarf gene w/Jersey Wooly
 }//end class test don't try to put tests underneath this!!
