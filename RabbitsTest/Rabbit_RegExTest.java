@@ -122,14 +122,14 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name American Chinchilla
 
-    @Test
+    @Test //TEST TEN
     void testLowercaseAmericanChinchillaBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("american chinchilla");
         String expected = "american chinchilla";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }
+    }//end validate breed name american chinchilla
 
 
     //Testing ages and if it's a baby bun!!
@@ -783,6 +783,21 @@ class Rabbit_RegExTest
                 "Color: Chocolate Tortoiseshell";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate tortoiseshell
+
+    @Test //TEST THIRTY-SIX
+    void testLowercaseChocolateTortoiseshellColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("chocolate tortoiseshell");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: chocolate tortoiseshell";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color chocolate tortoiseshell
 
 
     //Test True Dwarf Gene!
