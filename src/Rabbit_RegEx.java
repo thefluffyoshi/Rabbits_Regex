@@ -8,7 +8,7 @@ public class Rabbit_RegEx
     private String color; //47 colors
     private int age; //in weeks or years
     private double weight; //in pounds
-    private boolean gender; //not used
+    private boolean gender; //true = female, false = male
     private boolean trueDwarfGene; //certain rabbit breeds have true dwarf gene
     // (gene = usually smaller ears, gene is kind of like a Punett Sqaure where if there are two true dwarf genes it equals a peanut baby bunny)
     private boolean isBaby;
