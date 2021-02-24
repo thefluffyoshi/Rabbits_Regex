@@ -502,7 +502,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color brown-gray agouti
 
-    @Test
+    @Test //TEST NINETEEN
     void testUppercaseCalifornianColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -514,6 +514,21 @@ class Rabbit_RegExTest
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
                 "Color: Californian";
+        assertEquals(expected, rabbit_color.toString());
+    }//end uppercase color californian
+
+    @Test
+    void testLowercaseCalifornianColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("californian");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: californian";
         assertEquals(expected, rabbit_color.toString());
     }
 
