@@ -974,6 +974,22 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color frosted pearl
 
+    @Test
+    void testLowercaseFrostedPearlColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("frosted pearl");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: frosted pearl\n" +
+                "Gender: male";
+        assertEquals(expected, rabbit_color.toString());
+    }
+
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
