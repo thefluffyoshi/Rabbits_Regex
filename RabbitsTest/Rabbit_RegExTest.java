@@ -958,6 +958,22 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color fawn
 
+    @Test //TEST FORTY-THREE
+    void testUppercaseFrostedPearlColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Frosted Pearl");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Frosted Pearl\n" +
+                "Gender: male";
+        assertEquals(expected, rabbit_color.toString());
+    }//end uppercase color frosted pearl
+
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
@@ -1066,7 +1082,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_gender.toString());
     }//end bun not baby gender is true
 
-    @Test
+    @Test //TEST TWO
     void testnotBabyGenderFalse()
     {
         Rabbit_RegEx rabbit_gender = new Rabbit_RegEx();
@@ -1078,5 +1094,5 @@ class Rabbit_RegExTest
                 "Color: \n" +
                 "Gender: male";
         assertEquals(expected, rabbit_gender.toString());
-    }
+    }//end bun not baby gender is false
 }//end class test don't try to put tests underneath this!!
