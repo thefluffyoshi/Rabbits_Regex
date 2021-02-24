@@ -403,6 +403,21 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue steel
 
+    @Test
+    void testUppercaseBlueTortColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("Blue Tort");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: Blue Tort";
+        assertEquals(expected, rabbit_color.toString());
+    }//end uppercase color blue tort
+
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
