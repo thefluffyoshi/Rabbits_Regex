@@ -135,11 +135,12 @@ public class Rabbit_RegEx
     private String validateBreedName(String breedName)
     {
         String[] breedNameArr = {"American", "American Chinchilla", "American Fuzzy Lop", "American Sable", "Argente Brun",
-            "Belgian Hare", "Beveren", "Blanc de Hotot", "Britannia Petite", "Californian", "Cavies", "Champagne d'Argent", "Checkered Giant", "Cinnamon",
-            "Creme d'Argent", "Dutch", "Dwarf Hotot", "English Angora", "English Lop", "English Spot", "Flemish Giant", "Florida White", "French Angora", "French Lop",
-            "Giant Angora", "Giant Chinchilla", "Harlequin", "Havana", "Himalayan", "Holland Lop", "Jersey Wooly", "Lilac", "Lionhead",
-            "Mini Lop", "Mini Rex", "Mini Satin", "Netherland Dwarf", "New Zealand", "Palomino", "Polish", "Rex", "Rhinelander",
-            "Satin", "Santin Angora", "Silver", "Silver Fox", "Silver Marten", "Standard Chinchilla", "Tan", "Thrianta"};
+                                "Belgian Hare", "Beveren", "Blanc de Hotot", "Britannia Petite", "Californian", "Cavies", "Champagne d'Argent",
+                                "Checkered Giant", "Cinnamon", "Creme d'Argent", "Dutch", "Dwarf Hotot", "English Angora", "English Lop",
+                                "English Spot", "Flemish Giant", "Florida White", "French Angora", "French Lop", "Giant Angora", "Giant Chinchilla",
+                                "Harlequin", "Havana", "Himalayan", "Holland Lop", "Jersey Wooly", "Lilac", "Lionhead", "Mini Lop", "Mini Rex",
+                                "Mini Satin", "Netherland Dwarf", "New Zealand", "Palomino", "Polish", "Rex", "Rhinelander", "Satin",
+                                "Satin Angora", "Silver", "Silver Fox", "Silver Marten", "Standard Chinchilla", "Tan", "Thrianta"};
 
         for (int i = 0; i < breedNameArr.length; i++)
         {
@@ -188,8 +189,8 @@ public class Rabbit_RegEx
                 "Brown-Gray Agouti", "Californian", "Castor", "Chinchilla", "Cinnamon",
                 "Chocolate", "Chocolate Agouti", "Chocolate Chinchilla", "Chocolate Steel", "Chocolate Tortoiseshell",
                 "Copper Agouti", "Cream", "Fawn", "Frosted Pearl", "Gray", "Light Gray",
-                "Lilac", "Lilac Chinchilla", "Lilac Steel", "Lilac Tortoiseshell", "Opal Agouti", "Orange", "Pearl", "Pointed White", "Red",
-                "Sable", "Sable Marten", "Sable Point", "Sandy", "Seal", "Self-Group", "Shaded Group",
+                "Lilac", "Lilac Chinchilla", "Lilac Steel", "Lilac Tortoiseshell", "Opal Agouti", "Orange", "Pearl", "Pointed White",
+                "Red", "Sable", "Sable Marten", "Sable Point", "Sandy", "Seal", "Self-Group", "Shaded Group",
                 "Silver", "Silver Fox", "Silver Marten", "Tan Pattern", "Ticking", "Tortoise", "Tortoiseshell", "Tri-Colored"};
 
         for (int i = 0; i < colorArr.length; i++)
@@ -229,17 +230,51 @@ public class Rabbit_RegEx
     {
         if(isBaby == false)
         {
-            return "Is the rabbit a baby?: " + isBaby +
+            if (gender == true)
+            {
+                return "Is the rabbit a baby?: " + isBaby +
                         "\nHow old is the rabbit?: " + age + " years" +
                         "\nWeight: " + weight + " in pounds" +
-                        "\nColor: " + color;
+                        "\nColor: " + color +
+                        "\nGender: female";
+            }//end nested loop
+            else
+            {
+                return "Is the rabbit a baby?: " + isBaby +
+                        "\nHow old is the rabbit?: " + age + " years" +
+                        "\nWeight: " + weight + " in pounds" +
+                        "\nColor: " + color +
+                        "\nGender: male";
+            }//end nested else
+
+//            return "Is the rabbit a baby?: " + isBaby +
+//                        "\nHow old is the rabbit?: " + age + " years" +
+//                        "\nWeight: " + weight + " in pounds" +
+//                        "\nColor: " + color;
         }//end if
         else
         {
-            return "Is the rabbit a baby?: " + isBaby +
+            if (gender == true)
+            {
+                return "Is the rabbit a baby?: " + isBaby +
                         "\nHow old is the rabbit?: " + age + " weeks" +
                         "\nWeight: " + weight + " in ounces" +
-                        "\nColor: " + color;
+                        "\nColor: " + color +
+                        "\nGender: female";
+            }//end nested loop
+            else
+            {
+                return "Is the rabbit a baby?: " + isBaby +
+                        "\nHow old is the rabbit?: " + age + " weeks" +
+                        "\nWeight: " + weight + " in ounces" +
+                        "\nColor: " + color +
+                        "\nGender: male";
+            }//end nested else
+
+//            return "Is the rabbit a baby?: " + isBaby +
+//                        "\nHow old is the rabbit?: " + age + " weeks" +
+//                        "\nWeight: " + weight + " in ounces" +
+//                        "\nColor: " + color;
         }//end else
     }//end toString
 
