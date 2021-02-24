@@ -499,13 +499,22 @@ class Rabbit_RegExTest
         rabbit_gene.setTrueDwarfGene(true, "American");
         boolean expected = false;
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
-    }//end test true dwarf gene w/American
+    }//end test true dwarf gene false w/American
 
-    @Test
+    @Test //TEST FOUR
     void testMiniRexTrueDwarfGene()
     {
         Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
         rabbit_gene.setTrueDwarfGene(true, "Mini Rex");
+        boolean expected = true;
+        assertEquals(expected, rabbit_gene.getTrueDwarfGene());
+    }//end test dwarf gene true w/Mini Rex
+
+    @Test
+    void testMiniSatinTrueDwarfGene()
+    {
+        Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
+        rabbit_gene.setTrueDwarfGene(true, "Mini Satin");
         boolean expected = true;
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
     }
