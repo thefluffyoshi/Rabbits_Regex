@@ -134,18 +134,24 @@ public class Rabbit_RegEx
 
     private String validateBreedName(String breedName)
     {
-//        String[] breedNameArr = {"American", "American Chinchilla", "American Fuzzy Lop", "American Sable", "Argente Brun",
-//            "Belgian Hare", "Beveren", "Blanc de Hotot", "Britannia Petite", "Californian", "Cavies", "Champagne d'Argent", "Checkered Giant", "Cinnamon",
-//            "Creme d'Argent", "Dutch", "Dwarf Hotot", "English Angora", "English Lop", "English Spot", "Flemish Giant", "Florida White", "French Angora", "French Lop",
-//            "Giant Angora", "Giant Chinchilla", "Harlequin", "Havana", "Himalayan", "Holland Lop", "Jersey Wooly", "Lilac", "Lionhead",
-//            "Mini Lop", "Mini Rex", "Mini Satin", "Netherland Dwarf", "New Zealand", "Palomino", "Polish", "Rex", "Rhinelander",
-//            "Satin", "Santin Angora", "Silver", "Silver Fox", "Silver Marten", "Standard Chinchilla", "Tan", "Thrianta"};
+        String[] breedNameArr = {"American", "American Chinchilla", "American Fuzzy Lop", "American Sable", "Argente Brun",
+            "Belgian Hare", "Beveren", "Blanc de Hotot", "Britannia Petite", "Californian", "Cavies", "Champagne d'Argent", "Checkered Giant", "Cinnamon",
+            "Creme d'Argent", "Dutch", "Dwarf Hotot", "English Angora", "English Lop", "English Spot", "Flemish Giant", "Florida White", "French Angora", "French Lop",
+            "Giant Angora", "Giant Chinchilla", "Harlequin", "Havana", "Himalayan", "Holland Lop", "Jersey Wooly", "Lilac", "Lionhead",
+            "Mini Lop", "Mini Rex", "Mini Satin", "Netherland Dwarf", "New Zealand", "Palomino", "Polish", "Rex", "Rhinelander",
+            "Satin", "Santin Angora", "Silver", "Silver Fox", "Silver Marten", "Standard Chinchilla", "Tan", "Thrianta"};
 
-        while (!breedName.matches("^[A-Za-z-' ][a-zA-Z-' ][a-zA-z-' ]*"))
+        for (int i = 0; i < breedNameArr.length; i++)
         {
-            System.out.println("Breed names don't have numbers!");
-            return breedName;
-        }//end while
+            if (breedName.equals(breedNameArr[i]))
+            {
+                while (!breedName.matches("^[A-Za-z-' ][a-zA-Z-' ][a-zA-z-' ]*"))
+                {
+                    System.out.println("Breed names don't have numbers!");
+                    return breedName;
+                }//end while
+            }//end if
+        }//end for
         return breedName;
     }//end validateBreedName
 
