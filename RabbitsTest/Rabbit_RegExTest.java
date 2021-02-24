@@ -167,6 +167,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name american sable
 
+    @Test //TEST FIFTEEN
+    void testUppercaseArgenteBunBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("Argente Bun");
+        String expected = "Argente Bun";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name Argente Bun
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
