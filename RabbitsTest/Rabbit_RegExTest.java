@@ -95,14 +95,23 @@ class Rabbit_RegExTest
         assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z-' ][a-zA-Z-' ][a-zA-z-' ]*"));
     }//end testing for special characters
 
-    @Test
-    void testAmericanBreedName()
+    @Test //TEST SEVEN
+    void testUppercaseAmericanBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("American");
         String expected = "American";
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end test validate breed name American
+
+    @Test
+    void testLowercaseAmericanBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("american");
+        String expected = "american";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }
 
 
     //Testing ages and if it's a baby bun!!
@@ -742,7 +751,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate steel
 
-    @Test
+    @Test //TEST THIRTY-FIVE
     void testUppercaseChocolateTortoiseshellColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
@@ -755,7 +764,7 @@ class Rabbit_RegExTest
                 "Weight: 2.0 in ounces\n" +
                 "Color: Chocolate Tortoiseshell";
         assertEquals(expected, rabbit_color.toString());
-    }
+    }//end uppercase color chocolate tortoiseshell
 
 
     //Test True Dwarf Gene!
