@@ -192,6 +192,15 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Belgian Hare");
         String expected = "Belgian Hare";
         assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name Belgian Hare
+
+    @Test //TEST EIGHTEEN
+    void testLowercaseBelgianHareBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("belgian hare");
+        String expected = "belgian hare";
+        assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name belgian hare
 
 
