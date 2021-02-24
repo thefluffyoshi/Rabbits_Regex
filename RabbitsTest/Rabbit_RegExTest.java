@@ -160,7 +160,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 0 weeks\n" +
                 "Weight: 0.0 in ounces\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_age.toString());
     }//end negative age + baby set to true
 
@@ -173,7 +174,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 0.0 in ounces\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_age.toString());
     }//end positive low age + baby set to true
 
@@ -186,7 +188,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 10 years\n" +
                 "Weight: 0.0 in pounds\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_age.toString());
     }//end positive high age + baby set to false
 
@@ -199,7 +202,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 10 years\n" +
                 "Weight: 0.0 in pounds\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_age.toString());
     }//end age over 10
 
@@ -215,7 +219,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 1 weeks\n" +
                 "Weight: 1.0 in ounces\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_weight.toString());
     }//end negative weight
 
@@ -229,7 +234,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 2 weeks\n" +
                 "Weight: 3.5 in ounces\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_weight.toString());
     }//end positive low weight and baby bun
 
@@ -243,7 +249,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 3 years\n" +
                 "Weight: 2.5 in pounds\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_weight.toString());
     } //end adult bun, low weight (dwarfs/smaller breeds)
 
@@ -257,7 +264,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 4 years\n" +
                 "Weight: 15.0 in pounds\n" +
-                "Color: ";
+                "Color: \n" +
+                "Gender: male";
         assertEquals(expected, rabbit_weight.toString());
     }//end positive high weight
 
@@ -271,7 +279,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: false\n" +
                 "How old is the rabbit?: 5 years\n" +
                 "Weight: 15.0 in pounds\n" +
-                "Color: ";
+                "Color: " +
+                "\nGender: male";
         assertEquals(expected, rabbit_weight.toString());
     }//end weight over limit
 
@@ -288,7 +297,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Agouti";
+                "Color: Agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end test uppercase color agouti
 
@@ -303,7 +313,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: agouti";
+                "Color: agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color agouti
 
@@ -318,7 +329,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Black";
+                "Color: Black\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color black
 
@@ -333,7 +345,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: black";
+                "Color: black\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color black
 
@@ -348,7 +361,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Black Otter";
+                "Color: Black Otter\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end test uppercase color black otter
 
@@ -363,7 +377,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: black otter";
+                "Color: black otter\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color black otter
 
@@ -378,7 +393,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Blue";
+                "Color: Blue\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue
 
@@ -393,7 +409,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: blue";
+                "Color: blue\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue
 
@@ -408,7 +425,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Blue Otter";
+                "Color: Blue Otter\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color blue otter
 
@@ -423,7 +441,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: blue otter";
+                "Color: blue otter\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue otter
 
@@ -438,7 +457,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Blue Steel";
+                "Color: Blue Steel\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color blue steel
 
@@ -453,7 +473,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: blue steel";
+                "Color: blue steel\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue steel
 
@@ -468,7 +489,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Blue Tort";
+                "Color: Blue Tort\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color blue tort
 
@@ -483,7 +505,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: blue tort";
+                "Color: blue tort\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue tort
 
@@ -498,7 +521,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Broken";
+                "Color: Broken\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color broken
 
@@ -513,7 +537,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: broken";
+                "Color: broken\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color broken
 
@@ -528,7 +553,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Brown-Gray Agouti";
+                "Color: Brown-Gray Agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color brown-gray agouti
 
@@ -543,7 +569,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: brown-gray agouti";
+                "Color: brown-gray agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color brown-gray agouti
 
@@ -558,7 +585,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Californian";
+                "Color: Californian\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color californian
 
@@ -573,7 +601,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: californian";
+                "Color: californian\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color californian
 
@@ -588,7 +617,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Castor";
+                "Color: Castor\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color castor
 
@@ -603,7 +633,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: castor";
+                "Color: castor\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color castor
 
@@ -618,7 +649,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chinchilla";
+                "Color: Chinchilla\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chinchilla
 
@@ -633,7 +665,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chinchilla";
+                "Color: chinchilla\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chinchilla
 
@@ -648,7 +681,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Cinnamon";
+                "Color: Cinnamon\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color cinnamon
 
@@ -663,7 +697,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: cinnamon";
+                "Color: cinnamon\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color cinnamon
 
@@ -678,7 +713,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chocolate";
+                "Color: Chocolate\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate
 
@@ -693,7 +729,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chocolate";
+                "Color: chocolate\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate
 
@@ -708,7 +745,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chocolate Agouti";
+                "Color: Chocolate Agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate agouti
 
@@ -723,7 +761,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chocolate agouti";
+                "Color: chocolate agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate agouti
 
@@ -738,7 +777,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chocolate Chinchilla";
+                "Color: Chocolate Chinchilla\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate chinchilla
 
@@ -753,7 +793,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chocolate chinchilla";
+                "Color: chocolate chinchilla\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate chinchilla
 
@@ -768,7 +809,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chocolate Steel";
+                "Color: Chocolate Steel\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate steel
 
@@ -783,7 +825,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chocolate steel";
+                "Color: chocolate steel\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate steel
 
@@ -798,7 +841,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Chocolate Tortoiseshell";
+                "Color: Chocolate Tortoiseshell\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color chocolate tortoiseshell
 
@@ -813,7 +857,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: chocolate tortoiseshell";
+                "Color: chocolate tortoiseshell\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color chocolate tortoiseshell
 
@@ -828,7 +873,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Copper Agouti";
+                "Color: Copper Agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color copper agouti
 
@@ -843,7 +889,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: copper agouti";
+                "Color: copper agouti\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color copper agouti
 
@@ -858,7 +905,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: Cream";
+                "Color: Cream\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color cream
 
@@ -873,7 +921,8 @@ class Rabbit_RegExTest
         String expected = "Is the rabbit a baby?: true\n" +
                 "How old is the rabbit?: 4 weeks\n" +
                 "Weight: 2.0 in ounces\n" +
-                "Color: cream";
+                "Color: cream\n" +
+                "Gender: male";
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color cream
 
