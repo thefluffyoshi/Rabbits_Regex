@@ -644,4 +644,13 @@ class Rabbit_RegExTest
         boolean expected = true;
         assertEquals(expected, rabbit_gene.getTrueDwarfGene());
     }//end test dwarf gene w/American Fuzzy Lop
+
+    @Test
+    void testJerseyWoolyTrueDwarfGene()
+    {
+        Rabbit_RegEx rabbit_gene = new Rabbit_RegEx();
+        rabbit_gene.setTrueDwarfGene(true, "Jersey Wooly");
+        boolean expected = true;
+        assertEquals(expected, rabbit_gene.getTrueDwarfGene());
+    }
 }//end class test don't try to put tests underneath this!!
