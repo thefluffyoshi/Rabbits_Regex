@@ -99,8 +99,10 @@ class Rabbit_RegExTest
     void testAmericanBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
-        rabbit_breed.setBreedName("");
-    }
+        rabbit_breed.setBreedName("American");
+        String expected = "American";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end test validate breed name American
 
 
     //Testing ages and if it's a baby bun!!
@@ -424,6 +426,21 @@ class Rabbit_RegExTest
                 "Color: Blue Tort";
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color blue tort
+
+    @Test
+    void testLowercaseBlueTortColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setIsBaby(true);
+        rabbit_color.setWeight(2);
+        rabbit_color.setAge(4);
+        rabbit_color.setColor("blue tort");
+        String expected = "Is the rabbit a baby?: true\n" +
+                "How old is the rabbit?: 4 weeks\n" +
+                "Weight: 2.0 in ounces\n" +
+                "Color: blue tort";
+        assertEquals(expected, rabbit_color.toString());
+    }
 
 
     //Test True Dwarf Gene!
