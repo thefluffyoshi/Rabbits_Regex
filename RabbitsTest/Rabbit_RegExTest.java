@@ -104,12 +104,21 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end test validate breed name American
 
-    @Test
+    @Test //TEST EIGHT
     void testLowercaseAmericanBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("american");
         String expected = "american";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name american
+
+    @Test
+    void testUppercaseAmericanChinchillaBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("American Chinchilla");
+        String expected = "American Chinchilla";
         assertEquals(expected, rabbit_breed.getBreedName());
     }
 
