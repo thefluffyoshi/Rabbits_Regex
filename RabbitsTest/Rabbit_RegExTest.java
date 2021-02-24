@@ -92,8 +92,15 @@ class Rabbit_RegExTest
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("Champagne d'Argent");
-        assertFalse(rabbit_breed.getBreedName().matches("^[A-Za-z][a-zA-Z- ][a-zA-z- ]*"));
+        assertTrue(rabbit_breed.getBreedName().matches("^[A-Za-z-' ][a-zA-Z-' ][a-zA-z-' ]*"));
     }//end testing for special characters
+
+    @Test
+    void testAmericanBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("");
+    }
 
 
     //Testing ages and if it's a baby bun!!
@@ -403,7 +410,7 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color blue steel
 
-    @Test
+    @Test //TEST THIRTEEN
     void testUppercaseBlueTortColor()
     {
         Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
