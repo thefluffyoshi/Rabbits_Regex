@@ -102,7 +102,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("American");
         String expected = "American";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end test validate breed name American
+    }//end uppercase breed name American
 
     @Test //TEST EIGHT
     void testLowercaseAmericanBreedName()
@@ -111,7 +111,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("american");
         String expected = "american";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name american
+    }//end lowercase breed name american
 
     @Test //TEST NINE
     void testUppercaseAmericanChinchillaBreedName()
@@ -120,7 +120,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("American Chinchilla");
         String expected = "American Chinchilla";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name American Chinchilla
+    }//end uppercase breed name American Chinchilla
 
     @Test //TEST TEN
     void testLowercaseAmericanChinchillaBreedName()
@@ -129,7 +129,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("american chinchilla");
         String expected = "american chinchilla";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name american chinchilla
+    }//end lowercase breed name american chinchilla
 
     @Test //TEST ELEVEN
     void testUppercaseAmericanFuzzyLopBreedName()
@@ -138,7 +138,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("American Fuzzy Lop");
         String expected = "American Fuzzy Lop";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name American Fuzzy Lop
+    }//end uppercase breed name American Fuzzy Lop
 
     @Test //TEST TWELVE
     void testLowercaseAmericanFuzzyLopBreedName()
@@ -147,7 +147,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("american fuzzy lop");
         String expected = "american fuzzy lop";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name american fuzzy lop
+    }//end lowercase breed name american fuzzy lop
 
     @Test //TEST THIRTEEN
     void testUppercaseAmericanSableBreedName()
@@ -156,7 +156,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("American Sable");
         String expected = "American Sable";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name American Sable
+    }//end uppercase breed name American Sable
 
     @Test //TEST FOURTEEN
     void testLowercaseAmericanSableBreedName()
@@ -165,7 +165,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("american sable");
         String expected = "american sable";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name american sable
+    }//end lowercase breed name american sable
 
     @Test //TEST FIFTEEN
     void testUppercaseArgenteBunBreedName()
@@ -174,7 +174,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Argente Bun");
         String expected = "Argente Bun";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Argente Bun
+    }//end uppercase breed name Argente Bun
 
     @Test //TEST SIXTEEN
     void testLowercaseArgenteBunBreedName()
@@ -183,7 +183,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("argente bun");
         String expected = "argente bun";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name argente bun
+    }//end lowercase breed name argente bun
 
     @Test //TEST SEVENTEEN
     void testUppercaseBelgianHareBreedName()
@@ -192,7 +192,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Belgian Hare");
         String expected = "Belgian Hare";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Belgian Hare
+    }//end uppercase breed name Belgian Hare
 
     @Test //TEST EIGHTEEN
     void testLowercaseBelgianHareBreedName()
@@ -201,7 +201,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("belgian hare");
         String expected = "belgian hare";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name belgian hare
+    }//end lowercase breed name belgian hare
 
     @Test //TEST NINETEEN
     void testUppercaseBeverenBreedName()
@@ -210,7 +210,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Beveren");
         String expected = "Beveren";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Beveren
+    }//end uppercase breed name Beveren
 
     @Test //TEST TWENTY
     void testLowercaseBeverenBreedName()
@@ -219,7 +219,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("beveren");
         String expected = "beveren";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name beveren
+    }//end lowercase breed name beveren
 
     @Test //TEST TWENTY-ONE
     void testUppercaseBlancDeHototBreedName()
@@ -228,7 +228,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Blanc De Hotot");
         String expected = "Blanc De Hotot";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Blanc De Hotot
+    }//end uppercase breed name Blanc De Hotot
 
     @Test //TEST TWENTY-TWO
     void testLowercaseBlancDeHototBreedName()
@@ -237,7 +237,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("blanc de hotot");
         String expected = "blanc de hotot";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name blanc de hotot
+    }//end lowercase breed name blanc de hotot
 
     @Test //TEST TWENTY-THREE
     void testUppercaseBritanniaPetiteBreedName()
@@ -246,7 +246,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Britannia Petite");
         String expected = "Britannia Petite";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Britannia Petite
+    }//end uppercase breed name Britannia Petite
 
     @Test //TEST TWENTY-FOUR
     void testLowercaseBritanniaPetiteBreedName()
@@ -255,7 +255,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("britannia petite");
         String expected = "britannia petite";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name britannia petite
+    }//end lowercase breed name britannia petite
 
     @Test //TEST TWENTY-FIVE
     void testUppercaseCalifornianBreedName()
@@ -264,7 +264,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Californian");
         String expected = "Californian";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Californian
+    }//end uppercase breed name Californian
 
     @Test //TEST TWENTY-SIX
     void testLowercaseCalifornianBreedName()
@@ -273,7 +273,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("californian");
         String expected = "californian";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name californian
+    }//end lowercase breed name californian
 
     @Test //TEST TWENTY-SEVEN
     void testUppercaseCaviesBreedName()
@@ -282,7 +282,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Cavies");
         String expected = "Cavies";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Cavies
+    }//end uppercase breed name Cavies
 
     @Test //TEST TWENTY-EIGHT
     void testLowercaseCaviesBreedname()
@@ -291,7 +291,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("cavies");
         String expected = "cavies";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name cavies
+    }//end lowercase breed name cavies
 
     @Test //TEST TWENTY-NINE
     void testUppercaseChampagneDArgentBreedName()
@@ -300,7 +300,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Champagne d'Argent");
         String expected = "Champagne d'Argent";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Champagne d'Argent
+    }//end uppercase breed name Champagne d'Argent
 
     @Test //TEST THIRTY
     void testLowercaseChampagneDArgentBreedName()
@@ -309,7 +309,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("champagne d'argent");
         String expected = "champagne d'argent";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name champagne d'argent
+    }//end lowercase breed name champagne d'argent
 
     @Test //TEST THIRTY-ONE
     void testUppercaseCheckeredGiantBreedName()
@@ -318,7 +318,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Checkered Giant");
         String expected = "Checkered Giant";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Checkered Giant
+    }//end uppercase breed name Checkered Giant
 
     @Test //TEST THIRTY-TWO
     void testLowercaseCheckeredGiantBreedName()
@@ -327,7 +327,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("checkered giant");
         String expected = "checkered giant";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name checkered giant
+    }//end lowercase breed name checkered giant
 
     @Test //TEST THIRTY-THREE
     void testUppercaseCinnamonBreedName()
@@ -336,7 +336,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Cinnamon");
         String expected = "Cinnamon";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Cinnamon
+    }//end uppercase breed name Cinnamon
 
     @Test //TEST THIRTY-FOUR
     void testLowercaseCinnamonBreedName()
@@ -345,7 +345,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("cinnamon");
         String expected = "cinnamon";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name cinnamon
+    }//end lowercase breed name cinnamon
 
     @Test //TEST THIRTY-FIVE
     void testUppercaseCremeDArgentBreedName()
@@ -354,7 +354,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Creme d'Argent");
         String expected = "Creme d'Argent";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Creme d'Argent
+    }//end uppercase breed name Creme d'Argent
 
     @Test //TEST THIRTY-SIX
     void testLowercaseCremeDArgentBreedName()
@@ -363,7 +363,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("creme d'argent");
         String expected = "creme d'argent";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name creme d'argent
+    }//end lowercase breed name creme d'argent
 
     @Test //TEST THIRTY-SEVEN
     void testUppercaseDutchBreedName()
@@ -372,7 +372,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Dutch");
         String expected = "Dutch";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Dutch
+    }//end uppercase breed name Dutch
 
     @Test //TEST THIRTY-EIGHT
     void testLowercaseDutchBreedName()
@@ -381,7 +381,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("dutch");
         String expected = "dutch";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name dutch
+    }//end lowercase breed name dutch
 
     @Test //TEST THIRTY-NINE
     void testUppercaseDwarfHototBreedName()
@@ -390,7 +390,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Dwarf Hotot");
         String expected = "Dwarf Hotot";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name Dwarf Hotot
+    }//end uppercase breed name Dwarf Hotot
 
     @Test //TEST FORTY
     void testLowercaseDwarfHototBreedName()
@@ -399,7 +399,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("dwarf hotot");
         String expected = "dwarf hotot";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name dwarf hotot
+    }//end lowercase breed name dwarf hotot
 
     @Test //TEST FORTY-ONE
     void testUppercaseEnglishAngoraBreedName()
@@ -408,7 +408,7 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("English Angora");
         String expected = "English Angora";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name English Angora
+    }//end uppercase breed name English Angora
 
     @Test //TEST FORTY-TWO
     void testLowercaseEnglishAngoraBreedName()
@@ -417,7 +417,16 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("english angora");
         String expected = "english angora";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }//end validate breed name english angora
+    }//end lowercase breed name english angora
+
+    @Test //TEST FORTY-THREE
+    void testUppercaseEnglishLopBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("English Lop");
+        String expected = "English Lop";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end uppercase breed name english lop
 
 
     //Testing ages and if it's a baby bun!!
