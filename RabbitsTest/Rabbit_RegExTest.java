@@ -437,6 +437,24 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end lowercase breed name english lop
 
+    @Test //TEST FORTY-FIVE
+    void testUppercaseEnglishSpotBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("English Spot");
+        String expected = "English Spot";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end uppercase breed name english spot
+
+    @Test //TEST FORTY-SIX
+    void testLowercaseEnglishSpotBreedname()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("english spot");
+        String expected = "english spot";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end lowercase breed name english spot
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
