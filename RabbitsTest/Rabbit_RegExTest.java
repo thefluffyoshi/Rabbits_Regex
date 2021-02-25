@@ -464,6 +464,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end uppercase breed name flemish giant
 
+    @Test //TEST FORTY-EIGHT
+    void testLowercaseFlemishGiantBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("flemish giant");
+        String expected = "flemish giant";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end lowercase breed name flemish giant
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
