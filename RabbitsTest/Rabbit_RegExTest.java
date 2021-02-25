@@ -410,6 +410,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name English Angora
 
+    @Test //TEST FORTY-TWO
+    void testLowercaseEnglishAngoraBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("english angora");
+        String expected = "english angora";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name english angora
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
