@@ -1736,6 +1736,19 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end lowercase color sable marten
 
+    @Test //TEST SEVENTY-ONE
+    void testUppercaseSablePointColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setColor("Sable Point");
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 0 years\n" +
+                "Weight: 0.0 in pounds\n" +
+                "Color: Sable Point\n" +
+                "Gender: male";
+        assertEquals(expected, rabbit_color.toString());
+    }//end uppercase color sable point
+
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
