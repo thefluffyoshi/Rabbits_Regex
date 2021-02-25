@@ -554,6 +554,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end uppercase breed name giant chinchilla
 
+    @Test //TEST FIFTY-EIGHT
+    void testLowercaseGiantChinchillaBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("giant chinchilla");
+        String expected = "giant chinchilla";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end lowercase breed name giant chinchilla
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
