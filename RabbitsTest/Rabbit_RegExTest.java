@@ -390,7 +390,16 @@ class Rabbit_RegExTest
         rabbit_breed.setBreedName("Dwarf Hotot");
         String expected = "Dwarf Hotot";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }
+    }//end validate breed name Dwarf Hotot
+
+    @Test //TEST FORTY
+    void testLowercaseDwarfHototBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("dwarf hotot");
+        String expected = "dwarf hotot";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name dwarf hotot
 
 
     //Testing ages and if it's a baby bun!!
