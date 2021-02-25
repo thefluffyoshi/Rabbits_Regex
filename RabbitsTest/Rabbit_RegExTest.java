@@ -253,9 +253,18 @@ class Rabbit_RegExTest
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("britannia petite");
-        String expected = "britannia etite";
+        String expected = "britannia petite";
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name britannia petite
+
+    @Test
+    void testUppercaseCalifornianBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("Californian");
+        String expected = "Californian";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }
 
 
     //Testing ages and if it's a baby bun!!
