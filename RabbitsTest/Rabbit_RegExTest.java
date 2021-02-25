@@ -1342,6 +1342,19 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_color.toString());
     }//end uppercase color opal agouti
 
+    @Test //TEST FIFTY-EIGHT
+    void testLowercaseOpalAgoutiColor()
+    {
+        Rabbit_RegEx rabbit_color = new Rabbit_RegEx();
+        rabbit_color.setColor("opal agouti");
+        String expected = "Is the rabbit a baby?: false\n" +
+                "How old is the rabbit?: 0 years\n" +
+                "Weight: 0.0 in pounds\n" +
+                "Color: opal agouti\n" +
+                "Gender: male";
+        assertEquals(expected, rabbit_color.toString());
+    }//end lowercase color opal agouti
+
 
     //Test True Dwarf Gene!
     @Test //TEST ONE
