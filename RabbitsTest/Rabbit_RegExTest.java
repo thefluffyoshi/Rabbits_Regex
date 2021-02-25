@@ -302,14 +302,23 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name Champagne d'Argent
 
-    @Test
+    @Test //TEST THIRTY
     void testLowercaseChampagneDArgentBreedName()
     {
         Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
         rabbit_breed.setBreedName("champagne d'argent");
         String expected = "champagne d'argent";
         assertEquals(expected, rabbit_breed.getBreedName());
-    }
+    }//end validate breed name champagne d'argent
+
+    @Test //TEST THIRTY-ONE
+    void testUppercaseCheckeredGiantBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("Checkered Giant");
+        String expected = "Checkered Giant";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name Checkered Giant
 
 
     //Testing ages and if it's a baby bun!!
