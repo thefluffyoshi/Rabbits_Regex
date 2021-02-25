@@ -320,6 +320,15 @@ class Rabbit_RegExTest
         assertEquals(expected, rabbit_breed.getBreedName());
     }//end validate breed name Checkered Giant
 
+    @Test //TEST THIRTY-TWO
+    void testLowercaseCheckeredGiantBreedName()
+    {
+        Rabbit_RegEx rabbit_breed = new Rabbit_RegEx();
+        rabbit_breed.setBreedName("checkered giant");
+        String expected = "checkered giant";
+        assertEquals(expected, rabbit_breed.getBreedName());
+    }//end validate breed name checkered giant
+
 
     //Testing ages and if it's a baby bun!!
     @Test //TEST ONE
